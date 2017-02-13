@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+    <title>QUIZ</title>
+    <link href="../css/stylequiz.css" rel="stylesheet">
+
+    <link href='//ajax.googleapis.com/ajax/libs/jqueryui/1/themes/base/jquery-ui.css' rel='stylesheet'/>
+    <link href='//netdna.bootstrapcdn.com/twitter-bootstrap/2.1.1/css/bootstrap.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+
+</head>
+<div class="container">
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <img src="http://avprod-group.com/wp-content/uploads/2015/04/logo_avprod2.png">
+
+            </div>
+            <div class="nav navbar-nav navbar-right">
+                <div class="testimonial-desc">
+                    <img src="images/useravprod.jpg" alt=""/>
+                    <div class="testimonial-writer">
+                        <div class="testimonial-writer-name">Jean Dupont</div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+    <div class="panel panel-info spacer"></div>
+    <div class="panel-heading">Module formation : les m&eacutetiers du web</div>
+
+    <div class="panel panel-info spacer"></div>
+</div>
+
+<div class="center">
+
+
+    <div ng-app='App' ng-controller='dndCtrl' ng-cloak>
+
+        <div class="col-md-25 col-sm-25 col-xs-22">
+
+            <div class="panel panel-info spacer">
+                <div class="panel-heading">Associe chaque language de programmation au type correspondant</div>
+
+
+                <div class="panel-body">
+                    <h3>D&eacuteveloppement backend</h3>
+                    <div class="tbl" ui-drop-listener='dropListener' data-model='someArrays.list0'>
+                        <div ui-draggable ng-repeat='item in someArrays.list0' data-index='{{$index}}'
+                             class='btn btn-info btn-block'>
+                            {{item.name}}
+
+
+                        </div>
+                    </div>
+
+
+                    <div ui-drop-listener='dropListener' data-model='someArrays.list2' class="elt">
+
+                        <div ui-draggable ng-repeat='item in someArrays.list2' data-index='{{$index}}' class='bloc'>
+
+
+                            {{item.name}}
+
+                        </div>
+
+                        <br>
+
+                    </div>
+                    <h3>D&eacuteveloppement frontend</h3>
+                    <div class="tb" ui-drop-listener='dropListener' data-model='someArrays.list3'>
+                        <div ui-draggable ng-repeat='item in someArrays.list3' data-index='{{$index}}'
+                             class='btn btn-info btn-block'>
+                            {{item.name}}
+
+
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+        <center> <div class="btn">
+            <a href="corrigee.html">
+                <button class="label label-primary">Valider</button>
+            </a></div></center>
+        <div class="error" ng-if="errorMessage!=null">
+            {{errorMessage}}
+        </div>
+
+    </div>
+</div>
+
+<script src='//ajax.googleapis.com/ajax/libs/mootools/1.4.5/mootools-yui-compressed.js'></script>
+<script src='//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js'></script>
+<script src='//ajax.googleapis.com/ajax/libs/angularjs/1.0.3/angular.min.js'></script>
+<script src='//ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js'></script>
+
+<script src="../js/quiz.js">
+
+</script>
+
+</div>
+</html>
